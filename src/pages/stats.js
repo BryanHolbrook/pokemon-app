@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Card from '../components/card'
-import { Button } from 'evergreen-ui'
 import styles from '../components/Card.css'
 import { mean } from '../utils/mean'
 
@@ -28,10 +27,14 @@ export default function Stats({ pokemon }) {
       <h1>Stats</h1>
       {catchSome.map((details, index) => {
         return (
-          <div key={index}>
-            <img src={details.image}/>
-            <p>name: {details.name}</p>
-            <p>mean: {mean(details.height, details.weight)}</p>
+          <div className='grid-container'>
+            <div className='App-card' className='grid-item'>
+              <div key={index}>
+                <img alt='' src={details.image}/>
+                <p>name: {details.name}</p>
+                <p>mean: {mean(details.height, details.weight)}</p>
+              </div>
+            </div>
           </div>
         )
       })}

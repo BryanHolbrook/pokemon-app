@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
@@ -7,31 +6,30 @@ import Home from './pages/home'
 import Pikachu from './pages/pikachu'
 import Stats from './pages/stats'
 import Search from './pages/search'
-import TestData from './test-data.json'
 import styled from 'styled-components'
 
 const Header = styled.div`
-  background-color: ${props => props.primary ? 'pink' : '#282c34' };
+  background-color: ${props => props.primary ? '#f4f7f6' : 'white' };
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 `
 
 const Nav = styled.nav`
- background-color: purple;
- box-shadow: 0px 0px 30px rgb(0 0 0 / 30%);
+ background-color: #white;
+ box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
 `
 
 export default function App() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
-  
+
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon?limit=16&offset=0')
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
       .then(function (response) {
        return response.data.results
       })
@@ -64,21 +62,19 @@ export default function App() {
           <li>
             <Link to="/pikachu">Pikachu</Link>
           </li>
-          <li>
-            <Link to="/">Home</Link>
+          <li className="logo">
+            <Link to="/">PokéMon For Everyone</Link>
           </li>
         </ul>
       </Nav>
 
-
       <Header primary>
-
         <Route path="/" exact>
           <Home pokemon={data} />
         </Route>
 
         <Route path="/pikachu">
-          <Pikachu />
+          <Pikachu pokemon={data} />
         </Route>
 
         <Route path="/stats">

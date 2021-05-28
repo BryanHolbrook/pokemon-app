@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import styled from 'styled-components'
-
-const StyledApp = styled(App)`
-  text-align: center;
-`
 
 ReactDOM.render(
   <React.StrictMode>

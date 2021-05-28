@@ -4,7 +4,6 @@ import { Button } from 'evergreen-ui'
 
 export default function Home({ pokemon }) {
   const [isClicked, setClicked] = useState(false)
-  const [names, setNames] = useState([])
 
   const handleClick = () => {
       setClicked(true)
@@ -21,32 +20,15 @@ export default function Home({ pokemon }) {
           return (
             <div className='grid-container'>
               <div className='App-card' className='grid-item'>
-                <Card height={poke.height} weight={poke.weight} name={poke.name}>
-                  <img src={poke.sprites.front_default}/>
-                </Card>
-
-                <Card height={poke.height} weight={poke.weight} name={poke.name}>
-                  <img src={poke.sprites.back_default}/>
-                </Card>
+                <img alt='' src={poke.sprites.front_default}/>
+                <img alt='' src={poke.sprites.back_default}/>
+                <Card height={poke.height} weight={poke.weight} name={poke.name} />
               </div>
             </div>
           )
         })
 
       )}
-
-      {/*{pokemon.abilities.map((abs, index) => {
-        return <h3 key={index}>{abs.ability.name}</h3>
-      })}*/}
-
-      {/*{pokemon.stats.map((stat) => {
-        return (
-          <>
-            <p>{stat.effort}</p>
-            <p>{stat.base_stat}</p>
-          </>
-        )
-      })}*/}
 
     </div>
   )
