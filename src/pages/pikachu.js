@@ -23,7 +23,7 @@ export default function Pikachu({ pokemon }) {
 
 
   return (
-    <div>
+    <div className='grid-container'>
       <h1>Pikachu</h1>
       {catchSome.map((details, index) => {
         return (

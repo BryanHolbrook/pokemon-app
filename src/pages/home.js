@@ -10,8 +10,8 @@ export default function Home({ pokemon }) {
   }
 
   return (
-    <div>
-      <h1>Home</h1>
+    <div className='grid-container'>
+      <h1>PokéMon For Everyone</h1>
 
       <Button className="button" onClick={handleClick}>Catch Pokes, Mon!</Button>
 

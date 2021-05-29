@@ -23,7 +23,7 @@ export default function Stats({ pokemon }) {
   }, [])
 
   return (
-    <div>
+    <div className='grid-container'>
       <h1>Stats</h1>
       {catchSome.map((details, index) => {
         return (
