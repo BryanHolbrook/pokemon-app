@@ -9,8 +9,7 @@ export default function Card ({ children, name, weight, height }) {
 
     <div className='App'>
       <h3>{name || '' }</h3>
-      <p>{height || ''}</p>
-      <p>{weight || ''}</p>
+      <p>Ht : {height || ''} - Wt : {weight || ''}</p>
 
       <div className='App'>
         {children}

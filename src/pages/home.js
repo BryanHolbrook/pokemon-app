@@ -13,7 +13,7 @@ export default function Home({ pokemon }) {
     <div>
       <h1>Home</h1>
 
-      <Button onClick={handleClick}>Catch Pokes, Mon!</Button>
+      <Button className="button" onClick={handleClick}>Catch Pokes, Mon!</Button>
 
       {isClicked && (
         pokemon.map((poke) => {
