@@ -81,7 +81,9 @@ export default function App() {
           <Stats pokemon={data} />
         </Route>
 
-        <Route path="/search" component={Search} />
+        <Route path="/search">
+          <Search pokemon={data} />
+        </Route>
       </Header>
     </Router>
   )
