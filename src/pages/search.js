@@ -12,8 +12,9 @@ export default function Search({ pokemon }) {
   }
 
   return (
+    <div>
+    <h1 className="title">Search</h1>
     <div className='grid-container'>
-    <h1>Search</h1>
       <h1 className='visually-hidden'>Search</h1>
       <form  action='/search' method='get'>
         <label htmlFor='header-search'>
@@ -21,7 +22,7 @@ export default function Search({ pokemon }) {
             <SearchInput
               type='text'
               id='header-search'
-              placeholder='Search Pokemon'
+              placeholder='Search Pokés... Mon!'
               name='s'
             />
         <Button type='submit' onChange={handleSearch}>Search</Button>
@@ -42,6 +43,7 @@ export default function Search({ pokemon }) {
 
       )}
 
+      </div>
     </div>
   )
 }

@@ -10,26 +10,29 @@ export default function Home({ pokemon }) {
   }
 
   return (
-    <div className='grid-container'>
-      <h1>PokéMon For Everyone</h1>
-
+    <div>
+      <h1 className='title'>PokéMon For Everyone</h1>
+      <div className="grid-container">
       <Button className="button" onClick={handleClick}>Catch Pokes, Mon!</Button>
 
-      {isClicked && (
-        pokemon.map((poke) => {
-          return (
-            <div className='grid-container'>
-              <div className='App-card' className='grid-item'>
-                <img alt='' src={poke.sprites.front_default}/>
-                <img alt='' src={poke.sprites.back_default}/>
-                <Card height={poke.height} weight={poke.weight} name={poke.name} />
+      <div className='grid-container'>
+        {isClicked && (
+          pokemon.map((poke) => {
+            return (
+              <div className='grid-container'>
+                <div className='App-card' className='grid-item'>
+                  <img alt='' src={poke.sprites.front_default}/>
+                  <img alt='' src={poke.sprites.back_default}/>
+                  <Card height={poke.height} weight={poke.weight} name={poke.name} />
+                </div>
               </div>
-            </div>
-          )
-        })
 
-      )}
+            )
+          })
 
+        )}
+      </div>
+      </div>
     </div>
   )
 }

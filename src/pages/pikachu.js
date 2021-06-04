@@ -23,8 +23,10 @@ export default function Pikachu({ pokemon }) {
 
 
   return (
+    <div>
+    <h1 className='title'>Pikachu</h1>
     <div className='grid-container'>
-      <h1>Pikachu</h1>
+
       {catchSome.map((details, index) => {
         return (
           <div className='grid-container'>
@@ -39,6 +41,7 @@ export default function Pikachu({ pokemon }) {
           </div>
         )
       })}
+    </div>
     </div>
   )
 }

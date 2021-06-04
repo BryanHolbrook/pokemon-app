@@ -1,4 +1,13 @@
+.title {
+  text-align: center;
+  padding-top: 50px;
+}
 
+.button {
+  display: flex;
+  flex-direction: column;
+
+}
 
 .logo {
   color: white;

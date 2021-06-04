@@ -3,13 +3,12 @@
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .grid-item {

@@ -23,21 +23,23 @@ export default function Stats({ pokemon }) {
   }, [])
 
   return (
-    <div className='grid-container'>
-      <h1>Stats</h1>
-      {catchSome.map((details, index) => {
-        return (
-          <div className='grid-container'>
-            <div className='App-card' className='grid-item'>
-              <div key={index}>
-                <img alt='' src={details.image}/>
-                <p>name: {details.name}</p>
-                <p>mean: {mean(details.height, details.weight)}</p>
+    <div>
+      <h1 className='title'>Stats</h1>
+      <div className='grid-container'>
+        {catchSome.map((details, index) => {
+          return (
+            <div className='grid-container'>
+              <div className='App-card' className='grid-item'>
+                <div key={index}>
+                  <img alt='' src={details.image}/>
+                  <p>name: {details.name}</p>
+                  <p>mean: {mean(details.height, details.weight)}</p>
+                </div>
               </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }
