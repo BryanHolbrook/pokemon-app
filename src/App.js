@@ -82,7 +82,7 @@ export default function App() {
         </Route>
 
         <Route path="/search">
-          <Search pokemon={data} />
+          <Search/>
         </Route>
       </Header>
     </Router>

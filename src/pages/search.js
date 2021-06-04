@@ -1,47 +1,60 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Card from '../components/card'
-import { Button, SearchInput } from 'evergreen-ui'
 
 import styles from '../App.css'
 
-export default function Search({ pokemon }) {
-  const [isClicked, setClicked] = useState(false)
+export default function Search() {
+  // const [isClicked, setClicked] = useState(false)
+  const [name, setName] = useState()
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  const handleSearch = () => {
-      setClicked(true)
+  const handleSearch = (event) => {
+    event.preventDefault()
+
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then(function (response) {
+        return response.data
+      })
+      .then(function (result) {
+        setData(result)
+      })
+      .finally(function () {
+        setLoading(false)
+      })
   }
 
   return (
     <div>
     <h1 className="title">Search</h1>
-    <div className='grid-container'>
+    <div>
       <h1 className='visually-hidden'>Search</h1>
-      <form  action='/search' method='get'>
+      <form method='get' onSubmit={handleSearch}>
         <label htmlFor='header-search'>
         </label>
-            <SearchInput
+            <input
               type='text'
               id='header-search'
               placeholder='Search Pokés... Mon!'
+              onChange={(event) => setName(event.target.value)}
               name='s'
             />
-        <Button type='submit' onChange={handleSearch}>Search</Button>
+        <button type='submit'>Search</button>
       </form>
 
-      {isClicked && (
-        pokemon.map((poke) => {
-          return (
+
+
+      {!loading && (
             <div className='grid-container'>
               <div className='App-card' className='grid-item'>
-                <img alt='' src={poke.sprites.front_default}/>
-                <img alt='' src={poke.sprites.back_default}/>
-                <Card height={poke.height} weight={poke.weight} name={poke.name} />
+                <img src={data.sprites.front_default}/>
+                <h3>{data.name}</h3>
+                <p>Ht:{data.height}| Wt:{data.weight}</p>
+
               </div>
             </div>
-          )
-        })
-
-      )}
+          )}
 
       </div>
     </div>
