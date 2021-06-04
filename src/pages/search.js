@@ -48,9 +48,9 @@ export default function Search() {
       {!loading && (
             <div className='grid-container'>
               <div className='App-card' className='grid-item'>
-                <img src={data.sprites.front_default}/>
-                <h3>{data.name}</h3>
-                <p>Ht:{data.height}| Wt:{data.weight}</p>
+                <img src={data?.sprites?.front_default || ''}/>
+                <h3>{data?.name || ''}</h3>
+                <p>Ht:{data?.height || ''}| Wt:{data?.weight || ''}</p>
 
               </div>
             </div>
