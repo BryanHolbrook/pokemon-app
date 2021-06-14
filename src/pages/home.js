@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Card from '../components/card'
 import { Button } from 'evergreen-ui'
 
+import styles from '../App.css'
+
 export default function Home({ pokemon }) {
   const [isClicked, setClicked] = useState(false)
 
