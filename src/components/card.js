@@ -1,5 +1,6 @@
 import React from 'react'
 import '..'
+import styles from './Card.css'
 
 
 export default function Card ({ children, name, weight, height }) {

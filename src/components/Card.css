@@ -43,3 +43,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+p {
+  text-align: center;
+  padding: 10px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+}

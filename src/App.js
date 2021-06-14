@@ -4,25 +4,17 @@ import './App.css'
 
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import Home from './pages/home'
+import Catch from './pages/catch'
 import Pikachu from './pages/pikachu'
 import Stats from './pages/stats'
 import Search from './pages/search'
+import Cover from './pages/cover'
 import styled from 'styled-components'
 
-const Header = styled.div`
-  background-color: ${props => props.primary ? '#f4f7f6' : 'white' };
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-`
+
 
 const Nav = styled.nav`
- background-color: #white;
+ background-color: pink;
  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
 `
 
@@ -55,6 +47,9 @@ export default function App() {
     <Router>
       <Nav>
         <ul>
+        <li>
+          <Link to="/cover">Goodbye</Link>
+        </li>
           <li>
             <Link to="/search">Search</Link>
           </li>
@@ -70,9 +65,13 @@ export default function App() {
         </ul>
       </Nav>
 
-      <Header primary>
+      <div className="header">
+        <Route path="/cover">
+          <Cover/>
+        </Route>
+
         <Route path="/" exact>
-          <Home pokemon={data} />
+          <Catch pokemon={data} />
         </Route>
 
         <Route path="/pikachu">
@@ -86,7 +85,7 @@ export default function App() {
         <Route path="/search">
           <Search/>
         </Route>
-      </Header>
+      </div>
     </Router>
   )
 }

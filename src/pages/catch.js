@@ -4,7 +4,7 @@ import { Button } from 'evergreen-ui'
 
 import styles from '../App.css'
 
-export default function Home({ pokemon }) {
+export default function Catch({ pokemon }) {
   const [isClicked, setClicked] = useState(false)
 
   const handleClick = () => {
@@ -13,9 +13,9 @@ export default function Home({ pokemon }) {
 
   return (
     <div>
-      <h1 className='title'>PokéMon For Everyone</h1>
-      <div className="grid-container">
-      <Button className="button" onClick={handleClick}>Catch Pokes, Mon!</Button>
+      <h1 className='title'>Catch Pokés Mon</h1>
+      <div className='grid-container'>
+      <Button className='button' onClick={handleClick}>Catch Pokes, Mon!</Button>
 
       <div className='grid-container'>
         {isClicked && (

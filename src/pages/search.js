@@ -26,8 +26,8 @@ export default function Search() {
   }
 
   return (
-    <div>
-    <h1 className="title">Search</h1>
+    <div className='header'>
+    <h1 className='title'>Search</h1>
     <div>
       <h1 className='visually-hidden'>Search</h1>
       <form method='get' onSubmit={handleSearch}>
