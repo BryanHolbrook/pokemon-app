@@ -8,7 +8,6 @@ import Catch from './pages/catch'
 import Pikachu from './pages/pikachu'
 import Stats from './pages/stats'
 import Search from './pages/search'
-import Cover from './pages/cover'
 import styled from 'styled-components'
 
 
@@ -47,9 +46,6 @@ export default function App() {
     <Router>
       <Nav>
         <ul>
-        <li>
-          <Link to="/cover">Goodbye</Link>
-        </li>
           <li>
             <Link to="/search">Search</Link>
           </li>
@@ -66,9 +62,6 @@ export default function App() {
       </Nav>
 
       <div className="header">
-        <Route path="/cover">
-          <Cover/>
-        </Route>
 
         <Route path="/" exact>
           <Catch pokemon={data} />
