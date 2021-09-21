@@ -8,8 +8,8 @@ export default function Card ({ children, name, weight, height }) {
 
 /*name heigh weight data inputs*/
 
-    <div className='App'>
-      <h3>{name || '' }</h3>
+    <div className="App">
+      <h3 className="card-title">{name || '' }</h3>
       <p>Ht : {height || ''} - Wt : {weight || ''}</p>
 
       <div className='App'>

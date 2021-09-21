@@ -1,3 +1,9 @@
+html,
+body,
+.home-bg {
+  background-color: #5095ee;
+}
+
 .title {
   text-align: center;
   padding-top: 50px;
@@ -6,6 +12,7 @@
 p {
   text-align: center;
   padding: 10px;
+  color: white;
 }
 
 .button {
@@ -16,26 +23,25 @@ p {
 .logo {
   color: white;
   float: left;
-  background: #f1f1f1;
+  background: #1c79f38e;
   font-weight: bold;
 }
 
 ul {
-   list-style-type: none;
-   margin: auto;
-   padding: 1px;
-   overflow: hidden;
-   position: fixed;
-   top: 0;
-   width: 100%;
-   margin-bottom: 20px;
-   box-shadow: 0 2px 10px -6px black;
-   background-color: white;
+  list-style-type: none;
+  margin: auto;
+  padding: 1px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px -6px black;
 }
 
 li {
- float: right;
- /* border-right: 2px solid #e7e7e8; */
+  float: right;
+  /* border-right: 2px solid #e7e7e8; */
 }
 
 /* li:last-child {
@@ -43,18 +49,19 @@ li {
 } */
 
 li a {
- display: block;
- color: black;
- font-weight: bold;
- text-align: left;
- padding: 15px 17px;
- text-decoration: none;
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 15px 17px;
+  text-decoration: none;
 }
 
 /* Links will change color when hovered over */
 li a:hover {
- box-shadow: 0 2px 10px -6px black;
- transition: 0.3s ease-in-out;
+  box-shadow: 0 2px 10px -6px black;
+  transition: 0.3s ease-in-out;
+  background-color: #3786ec;
 }
 
 .visually-hidden {
@@ -68,12 +75,11 @@ li a:hover {
 }
 
 .header {
-  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: white;
 }

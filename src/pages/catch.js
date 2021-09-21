@@ -12,7 +12,7 @@ export default function Catch({ pokemon }) {
   }
 
   return (
-    <div>
+    <div className="">
       <h1 className='title'>Catch Pokés Mon</h1>
       <div className='grid-container'>
       <Button className='button' onClick={handleClick}>Catch Pokes, Mon!</Button>

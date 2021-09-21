@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App className="home-bg" />
   </React.StrictMode>,
   document.getElementById('root')
 );
